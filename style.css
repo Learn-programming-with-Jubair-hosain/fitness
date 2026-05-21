@@ -147,16 +147,6 @@
 .habit-text{
     text-align: center;
 }
-/* .habit-text>h3{
-    font-size: 3rem;
-    font-weight: 600;
-    color: #FFFFFF;
-}
-.habit-text>p{
-    color: rgba(255, 255, 255, 0.5);
-    margin-top: 28px;
-    margin-bottom: 60px;
-} */
 .main-container{
     border: 1px solid rgba(0, 0, 0, 0);
 }
@@ -194,7 +184,6 @@
 }
 /**** Run an Extra Mile Easily style ****/
 .run-container{
-    /* display: flex; */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 165px;
@@ -202,10 +191,10 @@
     margin-bottom: 100px;
     background-color: #222222;
     border-radius: 18px;
-    /* height: 371px; */
+    height: 371px;
 }
 .run-img img{
-    width: 366px;
+    width: 100%;
     height: 312px;
     border-radius: 15px;
 }
@@ -348,7 +337,7 @@ min-height: 489px;
 /*********** Responsive Layout  *********/
 /*** Mobile device 425px ***/
 @media screen and (max-width:500px) {
-    .nav-menu, .logo, .banner-btn, .banner-left, .run-container{
+    .nav-menu, .logo, .banner-btn, .banner-left, .run-container, .Training, .Trainings-demo, .them-img, .footer-content{
         margin-left: 10px;
         margin-right: 10px;
     }
@@ -402,12 +391,12 @@ min-height: 489px;
 .habit-img>p{
     margin-bottom: 10px;
 }
-}
 .run-container{
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     gap: 30px;
     height: 100%;
+    margin-bottom: 66px;
 }
 .run-text>h3{
     margin-top: 0;
@@ -415,11 +404,26 @@ min-height: 489px;
  .run-img img{
         width: 100%;
         height: auto;
-    }
-
+}
+.them-img{
+    grid-template-columns: repeat(1, 1fr);
+    margin-left: 30px;
+}
+.img-content>img{
+    width: 340px;
+}
+}
+.footer-content{
+    flex-direction: column;
+    gap: 30px;
+}
+.foot-end>p{
+    margin-top: 20px;
+    margin-bottom: 0px;
+}
 /***iPAD MINI ***/
 @media screen and (min-width:501px) and (max-width:992px) {
-    .nav-menu, .logo, .banner-btn, .banner-left, .run-container{
+    .nav-menu, .logo, .banner-btn, .banner-left, .run-container, .Training, .Trainings-demo, .them-img, .team-content{
         margin-left: 10px;
         margin-right: 10px;
     }
@@ -427,7 +431,7 @@ min-height: 489px;
         margin-bottom: -1%;
     }
     
-    .tooltip-1{
+.tooltip-1{
     right: -1%;
     margin-right: 10px;
     top: -1%;
@@ -450,9 +454,28 @@ min-height: 489px;
     margin-bottom: 10px;
 }
 .run-container{
-     display: grid;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+}
+.them-img{
+    grid-template-columns: repeat(2, 1fr);
+    margin-left: 20px;
+} 
+.img-content>img{
+    width: 100%;
+    height: 272px;
+}
+}
+
+/* Large Device  */
+/* @media screen and (min-width:992px) and (max-width:1920px) {
+    .run-container{
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
+.them-img{
+    grid-template-columns: repeat(3, 1fr);
+    margin-left: 20px;
 }
-
-
+} */
