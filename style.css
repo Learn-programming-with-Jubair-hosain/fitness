@@ -69,6 +69,10 @@
     align-items: center;
     cursor: pointer;
 }
+.hamburger-menu{
+    display: none;
+    color: #FFFFFF;
+}
 .nav-menu>span{
     background-color: #E6533C;
     border-radius: 46px;
@@ -190,15 +194,19 @@
 }
 /**** Run an Extra Mile Easily style ****/
 .run-container{
-    display: flex;
+    /* display: flex; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 165px;
     padding: 41px 54px;
     margin-bottom: 100px;
     background-color: #222222;
     border-radius: 18px;
+    /* height: 371px; */
 }
 .run-img img{
-    width: 100%;
+    width: 366px;
+    height: 312px;
     border-radius: 15px;
 }
 .run-descri{
@@ -206,7 +214,7 @@
     margin-top: 14px;
     margin-bottom: 34px;
 }
-.run-container, .run-text{
+.run-container{
     align-items: center;
 }
 /******* Trainings and Exercises *******/
@@ -333,5 +341,118 @@ min-height: 489px;
     margin-top: 70px;
     margin-bottom: 36px;
 }
-    /* background-color: rgba(255, 255, 255, 0.1); */
+
+.hide{
+    display: none;
+}
+/*********** Responsive Layout  *********/
+/*** Mobile device 425px ***/
+@media screen and (max-width:500px) {
+    .nav-menu, .logo, .banner-btn, .banner-left, .run-container{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .banner-container{
+        margin-bottom: -1%;
+    }
+.nav-menu{
+        display: none;
+    }
+.hamburger-menu{
+        display: inline;
+        margin-right: 20px;
+    }
+.banner-container{
+        flex-direction: column;
+        height: 100%;
+    }
+.banner-right>img{
+    width: 100%
+}
+.banner-btn{
+    display: flex;
+    gap: 1px;
+}
+.banner-btn>button{
+    padding: 20px 30px;
+}
+.banner-right{
+    margin-top: 0px;
+}
+.tooltip-1{
+    right: -1%;
+    margin-right: 10px;
+    top: -1%;
+}
+.tooltip-2{
+    margin-left: 10px;
+}
+
+.habit-img-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 5px;
+}
+.habit-container{
+    margin-top: 0px;
+}
+.habit-text>p{
+    margin-bottom: 30px;
+}
+.habit-img>p{
+    margin-bottom: 10px;
+}
+}
+.run-container{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+    height: 100%;
+}
+.run-text>h3{
+    margin-top: 0;
+}
+ .run-img img{
+        width: 100%;
+        height: auto;
+    }
+
+/***iPAD MINI ***/
+@media screen and (min-width:501px) and (max-width:992px) {
+    .nav-menu, .logo, .banner-btn, .banner-left, .run-container{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .nav-container, .banner-container{
+        margin-bottom: -1%;
+    }
+    
+    .tooltip-1{
+    right: -1%;
+    margin-right: 10px;
+    top: -1%;
+}
+.tooltip-2{
+    margin-left: 10px;
+}
+.habit-img-container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5px;
+}
+.habit-container{
+    margin-top: 0px;
+}
+.habit-text>p{
+    margin-bottom: 30px;
+}
+.habit-img>p{
+    margin-bottom: 10px;
+}
+.run-container{
+     display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+}
+
 
